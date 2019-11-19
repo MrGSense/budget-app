@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import BudgetForm from './BudgetForm';
+import BudgetList from './BudgetList';
+
+const uuid = require('uuid')
 
 class BudgetApp extends Component {
     constructor(props){
@@ -16,7 +19,8 @@ class BudgetApp extends Component {
         const parsedAmt = parseFloat(data.amount)
         const newData = {
             name: data.name,
-            amount: parsedAmt
+            amount: parsedAmt,
+            id: uuid()
         }
 
         if (data.type === "income") {
@@ -38,6 +42,8 @@ class BudgetApp extends Component {
         return (
             <div className="BudgetApp">
                 <BudgetForm sendData={this.getData} />
+                <BudgetList data={this.state.incomes} type="Income" />
+                <BudgetList data={this.state.expenses} type="Expense" />
             </div>
         )
     }
