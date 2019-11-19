@@ -1,37 +1,43 @@
 import React, { Component } from 'react';
-import BudgetForm from './BudgetForm'
+import BudgetForm from './BudgetForm';
 
 class BudgetApp extends Component {
     constructor(props){
         super(props);
         this.state = {
             incomes: [],
-            expenses: [],
-            totals: {
-                incomeTotal: 0,
-                expensesTotel: 0
-            }
+            expenses: []
+        }
+        this.getData = this.getData.bind(this);
+        this.addData = this.addData.bind(this);
+    }
+
+    addData(data){
+        const parsedAmt = parseFloat(data.amount)
+        const newData = {
+            name: data.name,
+            amount: parsedAmt
+        }
+
+        if (data.type === "income") {
+            const currentIncomes = this.state.incomes;
+            currentIncomes.push(newData);
+            this.setState({incomes: currentIncomes});
+        } else {
+            const currentExpenses = this.state.expenses;
+            currentExpenses.push(newData);
+            this.setState({expenses: currentExpenses});
         }
     }
 
-    // calculateTotals(array){
-    //     let arrayTotal = 0;
-    //     for(let i = 0; i < array.length; i++){
-    //         array[i] += arrayTotal;
-    //     }
-    //     return arrayTotal
-    // }
-
-    // componentDidUpdate(){
-    //     newIncomeTotal = this.calculateTotals(this.state.incomes);
-    //     newExpenseTotal = this.calculateTotals(this.state.expenses);
-    //     this.setState({incomeTotal: newIncomeTotal, expensesTotal: newExpenseTotal})
-    // }
+    getData(data) {
+        this.addData(data);
+    }
 
     render() {
         return (
             <div className="BudgetApp">
-                <BudgetForm />
+                <BudgetForm sendData={this.getData} />
             </div>
         )
     }
