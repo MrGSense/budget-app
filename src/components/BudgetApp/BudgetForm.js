@@ -34,19 +34,19 @@ class BudgetForm extends Component {
             <div className="BudgetForm">
                 <h1 className="BudgetForm__title">Add a new {this.state.value}</h1>
                 <form className="BudgetForm__form" onSubmit={this.onSubmit}>
-                    <select className="BudgetForm__select" name="value" id="value" onChange={this.onChange}>
+                    <select className="BudgetForm__form-select" name="value" id="value" onChange={this.onChange}>
                         <option value="income">Income</option>
                         <option value="expense">Expense</option>
                     </select>
-                    <div className="BudgetForm__name">
-                        <label className="BudgetForm__label">Name: </label>
-                        <input className="BudgetForm__input" type="text" name="name" id="name" onChange={this.onChange} placeholder="Name"></input>
+                    <div className="BudgetForm__form-div">
+                        <label className="BudgetForm__form-label">Name: </label>
+                        <input className="BudgetForm__form-input" type="text" name="name" id="name" onChange={this.onChange} placeholder="Name"></input>
                     </div>
-                    <div className="BudgetForm__amount">
-                        <label className="BudgetForm__label">Amount: </label>
-                        <input className="BudgetForm__input" type="number" name="amount" id="amount" onChange={this.onChange} placeholder="Amount"></input>
+                    <div className="BudgetForm__form-div">
+                        <label className="BudgetForm__form-label">Amount: </label>
+                        <input className="BudgetForm__form-input" type="number" name="amount" id="amount" onChange={this.onChange} placeholder="Amount"></input>
                     </div>
-                    <button className="BudgetForm__button" onSubmit={this.state.onSubmit}>Submit</button>
+                    <button className="BudgetForm__form-button" onSubmit={this.state.onSubmit}>Submit</button>
                 </form>
             </div>
         )

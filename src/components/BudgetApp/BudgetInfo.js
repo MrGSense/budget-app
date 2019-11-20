@@ -31,8 +31,8 @@ class BudgetInfo extends Component {
     render() {
         return (
             <div className="BudgetInfo">
-                <h2>Income: {this.state.incomeTotal}</h2>
-                <h2>Expense: {this.state.expenseTotal}</h2>
+                <h2 className="BudgetInfo__income">Income: ${this.state.incomeTotal}</h2>
+                <h2 className="BudgetInfo__expense">Expense: ${this.state.expenseTotal}</h2>
             </div>
         )
     }

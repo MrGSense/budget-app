@@ -7,5 +7,104 @@
 
 html {
   font-size: 62.5%;
+  text-align: center;
+}
+
+.BudgetApp {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.BudgetApp__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100%;
+}
+
+.BudgetInfo {
+  width: 20%;
+  margin-top: 2rem;
+}
+
+.BudgetInfo__income {
+  font-size: 3rem;
+}
+
+.BudgetInfo__expense {
+  font-size: 3rem;
+  margin-top: 1.5rem;
+}
+
+.BudgetForm {
+  width: 50%;
+  margin-top: 2rem;
+}
+
+.BudgetForm__title {
+  font-size: 4rem;
+}
+
+.BudgetForm__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 1.2rem;
+}
+
+.BudgetForm__form-select {
+  font-size: 2rem;
+}
+
+.BudgetForm__form-label {
+  font-size: 2rem;
+}
+
+.BudgetForm__form-input {
+  font-size: 2rem;
+}
+
+.BudgetForm__form-button {
+  font-size: 2rem;
+}
+
+.BudgetList {
+  margin-top: 2rem;
+  width: 30%;
+}
+
+.BudgetList__title {
+  font-size: 4rem;
+}
+
+.BudgetItem {
+  margin-top: 1.5rem;
+}
+
+.BudgetItem:last-child {
+  margin-bottom: 5rem;
+}
+
+.BudgetItem__text {
+  font-size: 2rem;
 }
 /*# sourceMappingURL=app.css.map */

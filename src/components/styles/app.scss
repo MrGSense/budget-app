@@ -7,4 +7,92 @@
 html{
     // This defines what 1rem is
     font-size: 62.5%; //1rem = 10px
+    text-align: center;
+}
+
+// Budget App
+.BudgetApp {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__lists {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}
+
+// Components of Budget App
+// Budget Info
+.BudgetInfo {
+    width: 20%;
+    margin-top: 2rem;
+
+    &__income {
+        font-size: 3rem;
+    }
+
+    &__expense {
+        font-size: 3rem;
+        margin-top: 1.5rem;
+    }
+}
+
+// Budget Form
+.BudgetForm {
+    width: 50%;
+    margin-top: 2rem;
+
+    &__title {
+        font-size: 4rem;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 1.2rem;
+
+        &-select {
+            font-size: 2rem;
+        }
+
+        &-label {
+            font-size: 2rem;
+        }
+
+        &-input {
+            font-size: 2rem;
+        }
+
+        &-button {
+            font-size: 2rem;
+        }
+    }
+}
+
+// Budget List
+.BudgetList {
+    margin-top: 2rem;
+    width: 30%;
+
+    &__title {
+        font-size: 4rem;
+    }
+}
+
+// Budget Item
+.BudgetItem {
+    margin-top: 1.5rem;
+
+    &:last-child {
+        margin-bottom: 5rem;
+    }
+
+    &__text {
+        font-size: 2rem;
+    }
 }

@@ -44,8 +44,10 @@ class BudgetApp extends Component {
             <div className="BudgetApp">
                 <BudgetInfo incomes={this.state.incomes} expenses={this.state.expenses} />
                 <BudgetForm sendData={this.getData} />
-                <BudgetList data={this.state.incomes} type="Income" />
-                <BudgetList data={this.state.expenses} type="Expense" />
+                <div className="BudgetApp__lists">
+                    <BudgetList data={this.state.incomes} type="Income" />
+                    <BudgetList data={this.state.expenses} type="Expense" />
+                </div>
             </div>
         )
     }
