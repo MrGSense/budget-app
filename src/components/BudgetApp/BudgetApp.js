@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BudgetForm from './BudgetForm';
 import BudgetList from './BudgetList';
+import BudgetInfo from './BudgetInfo';
 
 const uuid = require('uuid')
 
@@ -41,6 +42,7 @@ class BudgetApp extends Component {
     render() {
         return (
             <div className="BudgetApp">
+                <BudgetInfo incomes={this.state.incomes} expenses={this.state.expenses} />
                 <BudgetForm sendData={this.getData} />
                 <BudgetList data={this.state.incomes} type="Income" />
                 <BudgetList data={this.state.expenses} type="Expense" />
